@@ -1,0 +1,20 @@
+<div class="row my-4"><h2>Mine ShintoCoins</h2></div>
+<div class="row"><h6>Here you can mine ShintoCoins by being the first to 
+    solve the algorithm:</h6></div>
+<div class="row"></div>
+<form (submit)=userGuessed($event)>
+    <div class="row form-group">
+        <h6>Question: {{ questions[currQ] }}</h6>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <input type="text" name="response.userAnswer"
+            class="form-control"
+            [(ngModel)]="response.userAnswer">
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-primary"
+            >Mine</button>
+        </div>
+    </div>
+</form>
