@@ -1,0 +1,31 @@
+<div class="row my-4"><h2>Browse the Ledger</h2></div>
+<div class="row"><h6>Here you can browse all ShintoCoin
+    transactions.</h6></div>
+
+<section class="my-4">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr class="text-center">
+                <th scope="col">No.</th>
+                <th scope="col">Action</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Value ($)</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let action of ledger, let i = index"
+                class="text-center">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ action.action }}</td>
+                <td>{{ action.amount }}</td>
+                <td>{{ action.value }}</td>
+                <td>
+                    <button class="btn btn-sm btn-primary"
+                    (click)="detailsBtnPressed(action.id)"
+                    >Details</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
